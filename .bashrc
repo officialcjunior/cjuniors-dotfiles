@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
+# Some aliases to make things easier.
 alias ls='ls --color=auto'
 alias l='ls --color=auto'
 alias ..='cd ..'
@@ -24,6 +26,7 @@ PS1='[\u@\h \W]\$ '
 
 unset PROMPT_COMMAND # to override what the fascists forced us to see
 
+# git prompt to show me which branch I'm on
 test -s "$HOME/.git-prompt.sh" && source $HOME/.git-prompt.sh || true
 export PS1='\[\e]0;\w\a\]\n\[\e[94m\]\u@arch \[\e[33m\]\w\[\e[0m $(__git_ps1 "(%s)")\]\n\$ '
 

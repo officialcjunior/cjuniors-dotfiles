@@ -1,3 +1,6 @@
+! https://unix.stackexchange.com/questions/414926/bind-capshjkl-to-arrow-keys-caps-to-esc
+! Aimed at global vim-like navigation
+
 keycode 66 = Mode_switch
 keysym h = h H Left
 keysym l = l L Right
@@ -8,5 +11,6 @@ keysym i = i I Home
 keysym o = o O End
 keysym p = p P Next
 
+! Swap ESC with Caps to make Caps great again
 clear Lock
 keycode 66 = Escape NoSymbol Escape
